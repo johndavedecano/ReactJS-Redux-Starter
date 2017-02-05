@@ -12,8 +12,11 @@ A very minimal react application setup that is very straight forward.
 
 ## Installation 
 ```git clone https://github.com/johndavedecano/ReactJS-Redux-Starter.git myapplication```
+
 ```cd myapplication```
+
 ```yarn```
+
 ```npm run start```
 
 ## Production
