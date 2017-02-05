@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { createStore, compose, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import rootReducer from './redux/reducers/index';
@@ -10,22 +12,22 @@ function configureStoreProd(initialState) {
   const middlewares = [thunkMiddleware];
   return createStore(
     rootReducer,
-    initialState, 
-    compose(applyMiddleware(...middlewares))
+    initialState,
+    compose(applyMiddleware(...middlewares)),
   );
 }
 
 const logger = createLogger();
-const composeWithDevToolsExtension = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+const composeWithDevToolsExtension = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
 
 function configureStoreDev(initialState) {
   const middlewares = [logger, thunkMiddleware];
   return createStore(
     rootReducer,
-    initialState, 
+    initialState,
     composeWithDevToolsExtension(
-      applyMiddleware(...middlewares)
-    )
+      applyMiddleware(...middlewares),
+    ),
   );
 }
 

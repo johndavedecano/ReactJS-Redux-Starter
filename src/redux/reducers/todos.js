@@ -1,12 +1,11 @@
-import {Map, OrderedSet} from "immutable";
+import { Map, OrderedSet } from 'immutable';
 
 const initialState = Map({
   items: OrderedSet(),
-  entities: Map()
+  entities: Map(),
 });
 
 const Logic = {};
-
 
 
 function reducer(state = initialState, action) {

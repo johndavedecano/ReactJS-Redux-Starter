@@ -1,0 +1,22 @@
+/*eslint linebreak-style: ["error", "windows"]*/
+{
+  "extends": "airbnb",
+  "rules": {
+    "comma-dangle": 0,
+    "jsx-a11y/no-marquee": 0,
+    "extensions": 0,
+    "import/first": 0,
+    "import/extensions": 0,
+    "import/no-unresolved": 0,
+    "import/no-extraneous-dependencies": 0,
+    "import/newline-after-import": 0,
+    "react/prefer-stateless-function": 0,
+    "react/prop-types": 0,
+    "no-unused-vars": 0
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-module": {}
+    }
+  }
+}

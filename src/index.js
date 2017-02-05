@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
@@ -11,5 +12,5 @@ ReactDOM.render(
   <Provider store={store}>
     <Router history={browserHistory} children={routes} />
   </Provider>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
