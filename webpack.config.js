@@ -3,6 +3,7 @@ var path = require('path');
 var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 var DashboardPlugin = require('webpack-dashboard/plugin');
 
+var PORT = 8080;
 var ROOT_PATH = __dirname;
 var DIST_PATH = path.resolve(__dirname, 'dist');
 var SRC_PATH = path.resolve(__dirname, 'src');
@@ -12,10 +13,10 @@ module.exports = {
     historyApiFallback: true,
     hot: true,
     contentBase: DIST_PATH,
-    port: 8080
+    port: PORT
   },
   entry: [
-    'webpack-dev-server/client?http://localhost:8080',
+    'webpack-dev-server/client?http://localhost:' + PORT,
     SRC_PATH + '/index.js'
   ],
   output: {
@@ -47,6 +48,7 @@ module.exports = {
   plugins: [
     new webpack.LoaderOptionsPlugin({
       options: {
+        devtool: 'eval-source-map',
         eslint: {
           configFile: ROOT_PATH + '/.eslintrc',
           fix: true
@@ -56,6 +58,6 @@ module.exports = {
     }),
     new webpack.HotModuleReplacementPlugin(),
     new OpenBrowserPlugin({ url: 'http://localhost:8080' }),
-    new DashboardPlugin()
+    new DashboardPlugin({ port: PORT })
   ]
 }
