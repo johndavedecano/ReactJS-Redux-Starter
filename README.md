@@ -11,13 +11,15 @@ A very minimal react application setup that is very straight forward.
 8. Normalizr
 
 ## Installation 
-```git clone https://github.com/johndavedecano/ReactJS-Redux-Starter.git myapplication```
 
-```cd myapplication```
+``git clone https://github.com/johndavedecano/ReactJS-Redux-Starter.git myapplication``
 
-```yarn```
+``cd myapplication``
 
-```npm run start```
+``yarn``
+
+``npm run start``
+
 
 ## Production
 Just create a new webpack config that matches your production requirements.
