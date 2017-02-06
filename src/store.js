@@ -2,9 +2,9 @@
 
 import { createStore, compose, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import rootReducer from './redux/reducers/index';
+import rootReducer from './application/modules/reducer';
 import createLogger from 'redux-logger';
-import request from './redux/helpers/request';
+import request from './application/helpers/request';
 
 const thunkMiddleware = thunk.withExtraArgument(request);
 

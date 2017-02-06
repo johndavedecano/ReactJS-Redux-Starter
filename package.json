@@ -5,6 +5,7 @@
   "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "develop": "webpack-dev-server",
     "start": "webpack-dashboard -- node develop.js"
   },
   "author": "",
@@ -32,6 +33,7 @@
   },
   "devDependencies": {
     "babel-core": "^6.22.1",
+    "babel-eslint": "^7.1.1",
     "babel-loader": "^6.2.10",
     "babel-plugin-antd": "^0.5.1",
     "babel-plugin-module-resolver": "^2.4.0",

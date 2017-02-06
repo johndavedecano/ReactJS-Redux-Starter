@@ -8,6 +8,10 @@ import routes from './routes';
 
 const store = configureStore();
 
+if (process.env.NODE_ENV !== 'production') {
+  window.store = store;
+}
+
 ReactDOM.render(
   <Provider store={store}>
     <Router history={browserHistory} children={routes} />

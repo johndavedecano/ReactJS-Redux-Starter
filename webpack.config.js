@@ -43,6 +43,7 @@ module.exports = {
     ]
   },
   resolve: {
+    modules: [SRC_PATH, "node_modules"],
     extensions: ['.js', '.jsx', '.json', '.css', '.scss']
   },
   plugins: [
