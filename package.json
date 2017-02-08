@@ -6,7 +6,9 @@
   "scripts": {
     "develop": "webpack-dev-server",
     "start": "webpack-dashboard -- node develop.js",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "npm run test -- --watch",
+    "test:coverage": "npm run test -- --coverage"
   },
   "author": "",
   "license": "ISC",
