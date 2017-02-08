@@ -4,9 +4,9 @@
   "description": "ReactJS and Redux Boilerplate with SSR and SASS Modules",
   "main": "./src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "develop": "webpack-dev-server",
-    "start": "webpack-dashboard -- node develop.js"
+    "start": "webpack-dashboard -- node develop.js",
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +17,7 @@
     "history": "^4.5.1",
     "immutable": "^3.8.1",
     "imports-loader": "^0.7.0",
+    "jest": "^18.1.0",
     "lodash": "^4.17.4",
     "moment": "^2.17.1",
     "normalizr": "^3.1.0",
@@ -65,5 +66,13 @@
     "webpack": "^2.2.1",
     "webpack-dashboard": "^0.3.0",
     "webpack-dev-server": "^2.3.0"
+  },
+  "jest": {
+      "coverageDirectory": "./src",
+      "verbose": true,
+      "globals": {
+        "__SERVER__": true,
+        "__CLIENT__": true
+      }
   }
 }
