@@ -14,7 +14,6 @@ Logic[USERS_LOAD] = (state, action) => state
 Logic[USERS_LOAD.SUCCESS] = (state, action) => {
   const entities = state.get('entities').mergeDeep(action.entities);
   const result = state.get('result').concat(action.result);
-  console.log(entities.toJS(), result);
   return state
     .set('result', result)
     .set('entities', entities)

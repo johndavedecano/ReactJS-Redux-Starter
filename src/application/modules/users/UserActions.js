@@ -4,7 +4,7 @@ import UserSchema from './UserSchema';
 
 export function loadUsers(params) {
   return (dispatch, getState, client) => {
-    return new Promise((resolve, reject) => {
+    return new Promise(() => {
       dispatch({ type: USERS_LOAD });
       client.get('https://randomuser.me/api', { params })
         .then(response => response.data.results)

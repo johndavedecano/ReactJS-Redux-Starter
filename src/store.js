@@ -21,7 +21,7 @@ const logger = createLogger();
 const composeWithDevToolsExtension = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
 
 function configureStoreDev(initialState) {
-  const middlewares = [logger, thunkMiddleware];
+  const middlewares = [thunkMiddleware, logger];
   return createStore(
     rootReducer,
     initialState,
