@@ -1,10 +1,7 @@
 import React from 'react';
 import {
   Route,
-  NotFoundRoute,
-  Redirect,
-  DefaultRoute,
-  IndexRoute,
+  Redirect
 } from 'react-router';
 
 import App from './App';
