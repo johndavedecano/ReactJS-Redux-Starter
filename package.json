@@ -31,6 +31,7 @@
     "redux": "^3.6.0",
     "redux-define": "^1.1.0",
     "redux-logger": "^2.8.1",
+    "redux-saga": "^0.14.3",
     "redux-thunk": "^2.2.0",
     "reselect": "^2.5.4"
   },
@@ -70,11 +71,12 @@
     "webpack-dev-server": "^2.3.0"
   },
   "jest": {
-      "coverageDirectory": "./src",
-      "verbose": true,
-      "globals": {
-        "__SERVER__": true,
-        "__CLIENT__": true
-      }
+    "coverageDirectory": "./src",
+    "verbose": true,
+    "globals": {
+      "__SERVER__": true,
+      "__CLIENT__": true,
+      "window": true
+    }
   }
 }

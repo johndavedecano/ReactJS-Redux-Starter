@@ -1,36 +1,33 @@
-/* eslint-disable */
-
 import { createStore, compose, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
+import createSagaMiddleware from 'redux-saga';
 import rootReducer from './application/modules/reducer';
 import createLogger from 'redux-logger';
-import request from './application/helpers/request';
 
-const thunkMiddleware = thunk.withExtraArgument(request);
+import { rootSaga } from './application/modules/sagas';
+
+const sagaMiddleware = createSagaMiddleware();
 
 function configureStoreProd(initialState) {
-  const middlewares = [thunkMiddleware];
-  return createStore(
-    rootReducer,
-    initialState,
-    compose(applyMiddleware(...middlewares)),
-  );
+  const middlewares = [sagaMiddleware];
+  return createStore(rootReducer, initialState, compose(applyMiddleware(...middlewares)));
 }
 
 const logger = createLogger();
 const composeWithDevToolsExtension = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
 
 function configureStoreDev(initialState) {
-  const middlewares = [thunkMiddleware, logger];
+  const middlewares = [sagaMiddleware, logger];
   return createStore(
     rootReducer,
     initialState,
-    composeWithDevToolsExtension(
-      applyMiddleware(...middlewares),
-    ),
+    composeWithDevToolsExtension(applyMiddleware(...middlewares)),
   );
 }
 
-const configureStore = process.env.NODE_ENV === 'production' ? configureStoreProd : configureStoreDev;
+const configureStore = process.env.NODE_ENV === 'production'
+  ? configureStoreProd
+  : configureStoreDev;
+
+sagaMiddleware.run(rootSaga);
 
 export default configureStore;
