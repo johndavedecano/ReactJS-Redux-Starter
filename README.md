@@ -1,7 +1,7 @@
 # Reactify Boilerplate
 A very minimal react application setup that is very straight forward.
 
-[![Contact me on Codementor](https://cdn.codementor.io/badges/contact_me_github.svg)](https://www.codementor.io/johndavedecano?utm_source=github&utm_medium=button&utm_term=johndavedecano&utm_campaign=github
+[![Contact me on Codementor](https://cdn.codementor.io/badges/contact_me_github.svg)](https://www.codementor.io/johndavedecano?utm_source=github&utm_medium=button&utm_term=johndavedecano&utm_campaign=github)
 
 ## Includes
 1. ReactJS
